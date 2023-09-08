@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
+  dataFromParent = 'I\'m a value declared in Parent';
 
   constructor() { }
 

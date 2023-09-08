@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
   dataFromParent = 'I\'m a value declared in Parent';
+  receivedFromChild = 'Waiting for a new value from Child';
 
   constructor() { }
 
   ngOnInit() {
+  }
+  
+  doSomethingWithIt(valueFromChild: string) {
+    this.receivedFromChild = valueFromChild;
   }
 
 }

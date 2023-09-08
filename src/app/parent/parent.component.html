@@ -1,5 +1,10 @@
 <p>
 I'm parent
+
+{{ receivedFromChild }}
 </p>
 
-<app-child [attributeInChild]="dataFromParent"></app-child>
+<app-child 
+  [attributeInChild]="dataFromParent"
+  (fromChildEmitter)="doSomethingWithIt($event)"
+></app-child>

@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import * as _ from 'lodash-es';
 
 @Component({
   selector: 'app-child',
@@ -15,12 +14,11 @@ export class ChildComponent implements OnInit {
   ngOnInit() {}
 
   someMethodChangingTheValue() {
-    // the underscore _ is from Lodash https://lodash.com/
-    const newValue = _.sample([
+    const newValue =[
       "Started from the Child now I'm in Parent!",
       'Child sent me to Parent',
       'From Child to Parent',
-    ]);
+    ][Math.floor(Math.random() * 3)];
     this.fromChildEmitter.emit(newValue);
   }
 }
